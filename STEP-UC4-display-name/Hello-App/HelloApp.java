@@ -1,11 +1,18 @@
-import java.util.Scanner;
-
-public class HelloApp {
+public class HelloMultiple {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-        scanner.close();
+
+        if (args.length == 0) {
+            System.out.println("Hello World");
+        } else {
+            System.out.print("Hello ");
+
+            for (int i = 0; i < args.length; i++) {
+                System.out.print(args[i]);
+
+                if (i < args.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+        }
     }
 }
