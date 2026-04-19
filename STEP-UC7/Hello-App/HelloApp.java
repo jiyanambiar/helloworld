@@ -1,17 +1,11 @@
-import java.util.Scanner;
-
-public class HelloApp {
+public class HelloJoin {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine().trim();
-        
-        if (name.isEmpty()) {
+
+        if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            System.out.println("Hello, " + name + "!");
+            String names = String.join(", ", args);
+            System.out.println("Hello " + names);
         }
-        
-        scanner.close();
     }
 }
